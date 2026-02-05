@@ -51,12 +51,11 @@ const Index = () => {
 
   // Mover el botón No a una posición aleatoria
   const moveNoButton = useCallback(() => {
-    const maxX = 150;
-    const maxY = 80;
+    const maxX = 120;
+    const maxY = 60;
     const newX = (Math.random() - 0.5) * maxX * 2;
     const newY = (Math.random() - 0.5) * maxY * 2;
     setNoButtonPosition({ x: newX, y: newY });
-    setNoCount((prev) => prev + 1);
   }, []);
 
   // Manejar clic en Sí
@@ -106,27 +105,28 @@ const Index = () => {
           </h2>
 
           {!accepted && (
-            <div className="flex gap-4 items-center justify-center relative">
+            <div className="relative flex items-center justify-center w-full h-12">
+              {/* Botón Sí - siempre centrado */}
               <Button
                 onClick={handleYesClick}
                 className="font-bold transition-all duration-300 ease-out z-10"
                 style={{
                   transform: `scale(${getYesButtonScale()})`,
-                  fontSize: `${1 + noCount * 0.1}rem`,
-                  padding: `${0.5 + noCount * 0.1}rem ${1 + noCount * 0.2}rem`,
                 }}
               >
                 ¡Sí! 💖
               </Button>
 
+              {/* Botón No - posición absoluta para que pueda ser tapado */}
               <Button
                 variant="secondary"
                 onClick={() => {
                   setNoCount((prev) => prev + 1);
                   moveNoButton();
                 }}
-                className="font-bold transition-all duration-200 ease-out"
+                className="absolute font-bold transition-all duration-200 ease-out z-0"
                 style={{
+                  right: "10%",
                   transform: `translate(${noButtonPosition.x}px, ${noButtonPosition.y}px)`,
                   opacity: noCount >= 8 ? 0.3 : 1,
                 }}
