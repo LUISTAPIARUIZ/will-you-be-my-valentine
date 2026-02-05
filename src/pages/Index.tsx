@@ -123,10 +123,7 @@ const Index = () => {
                 variant="secondary"
                 onClick={() => {
                   setNoCount((prev) => prev + 1);
-                  // Solo empieza a huir después de 3 intentos
-                  if (noCount >= 2) {
-                    moveNoButton();
-                  }
+                  moveNoButton();
                 }}
                 className="font-bold transition-all duration-200 ease-out"
                 style={{
