@@ -121,8 +121,13 @@ const Index = () => {
 
               <Button
                 variant="secondary"
-                onMouseEnter={moveNoButton}
-                onClick={moveNoButton}
+                onClick={() => {
+                  setNoCount((prev) => prev + 1);
+                  // Solo empieza a huir después de 3 intentos
+                  if (noCount >= 2) {
+                    moveNoButton();
+                  }
+                }}
                 className="font-bold transition-all duration-200 ease-out"
                 style={{
                   transform: `translate(${noButtonPosition.x}px, ${noButtonPosition.y}px)`,
