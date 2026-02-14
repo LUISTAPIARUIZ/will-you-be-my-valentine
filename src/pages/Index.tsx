@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 const catGifs = {
   cute: "https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif",
   annoyed: "https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif", 
-  angry: "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif",
-  furious: "https://media.giphy.com/media/3o7bugPvJyqYWz3cM8/giphy.gif",
+  angry: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDlwdWl3bDg5a3NtczR2MjhsMG91dml3cWp3MnY0bXBhMWltZ2MyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wr7oA0rSjnWuiLJOY5/giphy.gif",
+  furious: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDFlbW8zcHlvanlwdmF5ZGR4OWdzYTBhZnUzeGRhZ3Y2MjNvMnZ1biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/haCYYKWRVeilcEL65X/giphy.gif",
   happy: "https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif",
 };
 
